@@ -19,6 +19,7 @@
         //afficher liste des mondes
 
         ?>
+         <li><a href="Ajout_Monde.php"> Ajouter un monde </a></li>
         </div>
 
 
