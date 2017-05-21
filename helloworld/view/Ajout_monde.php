@@ -19,7 +19,7 @@
             <div>
               <form method="post" action="controller/Controller_Ajout_Monde.php">
                 Nom du Monde:<br>
-                <input type="text" name="Worldname"><br><br>
+                <input type="text" name="WorldName"><br><br>
                 Informations:<br>
                 <input type="textarea" name="WorldInfos"><br><br>
                 <button class="btn waves-effect waves-light" id="submit" value="valider">Ajouter

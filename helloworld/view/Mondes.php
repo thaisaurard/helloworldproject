@@ -16,7 +16,7 @@
         <div>
         <?php
 
-        //afficher liste des mondes
+        //afficher liste des mondes de l'utilisateur
 
         ?>
          <li><a href="Ajout_Monde.php"> Ajouter un monde </a></li>
