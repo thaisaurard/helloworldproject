@@ -17,10 +17,10 @@
         ?>
         <div><h1 style="text-align:center;">Hello World</h1></div>
         <div>
-        	<ul>
-				<li><a href="Mondes.php"> Mondes </a></li>
-				<li><a href="Persos.php"> Personnages </a></li>
-        	</ul>
-
+          <ul style="text-align:center;">
+				      <li><a href="Mondes.php"> Mondes </a></li>
+				      <li><a href="Persos.php"> Personnages </a></li>
+          </ul>
+        </div>
     </body>
 </html>

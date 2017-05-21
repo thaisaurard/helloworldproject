@@ -5,8 +5,8 @@
 		<li><a href="Persos.php"> Personnages </a></li>
 	</ul>
 	<ul>
-		<li><a href="Profil.php" style="text-align:right;"> Mon Profil </a></li>
-		<li><a href="Deconnexion.php" style="text-align:right;"> Déconnexion </a></li>
+		<li><a href="Profil.php" style="float:right;"> Mon Profil </a></li>
+		<li><a href="Deconnexion.php" style="float:right;"> Déconnexion </a></li>
 	</ul>
 
 </nav>

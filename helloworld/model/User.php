@@ -2,7 +2,7 @@
 class User
 {
 
-	public static function Add_User($userName,$password,$userMail)
+	public static function Add_User($userName,$userPassword,$userMail)
 	{
 		require_once('Pdo.php');
 		$bdhello=connexion();
@@ -99,3 +99,4 @@ class User
 
 		return $data; //Verifier si null
 	}
+}
