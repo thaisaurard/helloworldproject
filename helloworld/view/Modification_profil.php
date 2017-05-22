@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>Hello World</title>
+        <title>Modifier Profil</title>
         <link rel="stylesheet" href="css/materialize/css/materialize.css">
         <style>
         	body {
@@ -18,6 +18,7 @@
             //formulaire
             //mise à jour BDD
         ?>
+        <h3 style="text-align:center;"> Modifier mon profil </h3>
 
     </body>
 </html>

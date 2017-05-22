@@ -12,7 +12,7 @@
     </head>
     <body>
         <?php require ("view/header2.php");
-            //  require ("testconnexion.php");
+              require ("testconnexion.php");
               ini_set('display_errors',1);
         ?>
         <div><h1 style="text-align:center;">Hello World</h1></div>

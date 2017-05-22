@@ -1,1 +1,1 @@
-<?php require_once("view/Persos.php"); ?>
+<?php require("view/ListePersonnages.php"); ?>

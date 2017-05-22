@@ -1,1 +1,1 @@
-<?php require_once("view/Mondes.php"); ?>
+<?php require_once("view/ListeMondes.php"); ?>
