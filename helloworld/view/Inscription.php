@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <title>Hello World</title>
-        <link rel="stylesheet" href="../css/materialize/css/materialize.css">
+        <link rel="stylesheet" href="css/materialize/css/materialize.css">
         <style>
         	body {
         		background-color: white;
@@ -25,9 +25,9 @@
           Adresse email:<br>
           <input type="text" name="userMail"><br>
           Mot de passe:<br>
-          <input type="text" name="userPassword" value="au moins 6 caractères"><br>
+          <input type="password" name="userPassword" value="au moins 6 caractères"><br>
           Vérification du mot de passe:<br>
-          <input type="text" name="checkPassword"><br>
+          <input type="password" name="checkPassword"><br>
           <button class="btn waves-effect waves-light" id="submit" value="valider">Inscription
           </button>
         </form>

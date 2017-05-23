@@ -7,6 +7,6 @@
     </head>
     <body>
         <?php require ("view/header.php");?>
-        <h1>Hello World</h1>
+        <h1 style="text-align:center">Hello World</h1>
     </body>
 </html>

@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <title>Hello World</title>
-        <link rel="stylesheet" href="../css/materialize/css/materialize.css">
+        <link rel="stylesheet" href="css/materialize/css/materialize.css">
         <style>
         	body {
         		background-color: white;
@@ -22,7 +22,7 @@
           Nom d'utilisateur:<br>
           <input type="text" name="userName"><br>
           Mot de passe:<br>
-          <input type="text" name="userPassword"><br>
+          <input type="password" name="userPassword"><br>
           <input type="submit" value="Submit">
         </form>
       </div>
