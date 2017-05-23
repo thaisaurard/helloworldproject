@@ -25,7 +25,7 @@
           Adresse email:<br>
           <input type="text" name="userMail"><br>
           Mot de passe:<br>
-          <input type="password" name="userPassword" value="au moins 6 caractères"><br>
+          <input type="password" name="userPassword"><br>
           Vérification du mot de passe:<br>
           <input type="password" name="checkPassword"><br>
           <button class="btn waves-effect waves-light" id="submit" value="valider">Inscription
