@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <title>Hello World</title>
-        <link rel="stylesheet" href="css/materialize/css/materialize.css">
+        <link rel="stylesheet" href="../css/materialize/css/materialize.css">
         <style>
         	body {
         		background-color: white;
@@ -21,11 +21,11 @@
       <div>
         <form method="post" action="../controller/Controller_Inscription.php">
           Nom d'utilisateur:<br>
-          <input type="text" name="userName"><br>
+          <input type="text" name="username"><br>
           Adresse email:<br>
-          <input type="text" name="userMail"><br>
+          <input type="text" name="usermail"><br>
           Mot de passe:<br>
-          <input type="password" name="userPassword"><br>
+          <input type="password" name="userpassword"><br>
           Vérification du mot de passe:<br>
           <input type="password" name="checkPassword"><br>
           <button class="btn waves-effect waves-light" id="submit" value="valider">Inscription
