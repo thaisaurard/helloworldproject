@@ -82,9 +82,9 @@ class user
 		require_once('Pdo.php');
 		$bdhello=connexion();
 
-		$req = $bdhello->prepare("SELECT * FROM user WHERE usermail ='".$usermail."'");
+		$req = $bdhello->prepare("SELECT * FROM user WHERE usermail = :usermail");
 
-		$req->execute();
+		$req->execute(array(":usermail" => $usermail));
 		$data=$req->fetch();
 
 		return $data;
