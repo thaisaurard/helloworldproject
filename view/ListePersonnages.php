@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <title>Personnages</title>
-        <link rel="stylesheet" href="css/materialize/css/materialize.css">
+        <link rel="stylesheet" href="../css/materialize/css/materialize.css">
         <style>
         	body {
         		background-color: white;
@@ -11,17 +11,25 @@
         </style>
     </head>
     <body>
-        <?php require ("view/header2.php");?>
+        <?php require("header2.php");?>
         <div><h1 style="text-align:center;">Mes Personnages</h1></div>
         <div>
-
           <?php
-          //afficher liste persos
-           ?>
+            require('../PDO.php');
+            $bdd=connexion();
+            $reponse = $bdd->query('SELECT * FROM character');
 
+            // On affiche chaque entrée une à une
+            while ($donnees = $reponse->fetch())
+            {
+            ?>
+                <p style="margin:10px"> <?php echo $donnees['charactername']; ?></br></p>
+            <?php
+            }
 
+            ?>
         </div>
 
+      </body>
 
-    </body>
 </html>

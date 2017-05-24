@@ -19,8 +19,11 @@
         <div>
           <ul style="text-align:center;">
 				      <li><a href="Mondes.php"> Mondes </a></li>
-				      <li><a href="Persos.php"> Personnages </a></li>
+				      <li><a href="Personnages.php"> Personnages </a></li>
           </ul>
         </div>
+    <div>
+        <?php //echo ?>
+    </div>
     </body>
 </html>

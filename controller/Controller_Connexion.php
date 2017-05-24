@@ -2,8 +2,8 @@
 require_once ("../model/User.php");
 
 
-$mdp = htmlspecialchars($_POST["userPassword"]);
-$mail = htmlspecialchars($_POST["userMmail"]);
+$mdp = htmlspecialchars($_POST["userpassword"]);
+$mail = htmlspecialchars($_POST["usermail"]);
 
 
 if (empty($mdp) || empty($mail)) {

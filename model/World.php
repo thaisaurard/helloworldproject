@@ -7,10 +7,10 @@ class World
 		require_once('Pdo.php');
 		$bdhello=connexion();
 
-		$req = $bdhello->prepare('INSERT INTO User(userName, userPassword, userMail) VALUES (:userName,:userPassword,:userMail)');
-		$req->bindParam(':userName',$userName);
-		$req->bindParam(':userPassword',$userPassword);
-		$req->bindParam(':userMail',$userMail);
+		$req = $bdhello->prepare('INSERT INTO User(username, userpassword, usermail) VALUES (:username,:userpassword,:usermail)');
+		$req->bindParam(':username',$username);
+		$req->bindParam(':userpassword',$userpassword);
+		$req->bindParam(':usermail',$usermail);
 
 		$req->execute();
 	}
