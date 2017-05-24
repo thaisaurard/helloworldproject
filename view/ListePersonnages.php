@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <title>Personnages</title>
-        <link rel="stylesheet" href="../css/materialize/css/materialize.css">
+        <link rel="stylesheet" href="css/materialize/css/materialize.css">
         <style>
         	body {
         		background-color: white;
@@ -15,7 +15,7 @@
         <div><h1 style="text-align:center;">Mes Personnages</h1></div>
         <div>
           <?php
-            require('../PDO.php');
+            require('PDO.php');
             $bdd=connexion();
             $reponse = $bdd->query('SELECT * FROM character');
 

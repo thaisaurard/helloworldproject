@@ -12,6 +12,7 @@
     </head>
     <body>
         <?php require ("view/header2.php");?>
+        <?php require ("controller/Controller_ListeMonde.php");?>
         <div><h1 style="text-align:center;">Mes Mondes</h1></div>
         <div>
         <?php

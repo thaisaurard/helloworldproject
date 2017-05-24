@@ -10,7 +10,7 @@
 	$checkPassword = htmlspecialchars($_POST['checkPassword']);
 
 
-	$mailverif=User::Check_Mail($usermail);
+	//$mailverif=User::Check_Mail($usermail);
 
 
 	if (empty($username) || empty($userpassword) || empty($checkPassword) || empty($usermail) ) {
@@ -29,10 +29,10 @@
 
 		header("Location: ../Erreur.php?erreur=".$messageErreur);
 	}
-	elseif (!(empty($mailverif['idUser']))) {
-		$messageErreur = "Ce mail est déjà associé à un compte !";
-		header("Location: ../Erreur.php?erreur=".$messageErreur);
-	}
+	// elseif (!(empty($mailverif['idUser']))) {
+	// 	$messageErreur = "Ce mail est déjà associé à un compte !";
+	// 	header("Location: ../Erreur.php?erreur=".$messageErreur);
+	// }
 	else
 	{
 		$userpassword = sha1(sha1($userpassword));

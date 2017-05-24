@@ -18,7 +18,7 @@
       <div><h2 style="text-align:center;">Hello World</h2></div>
       <div><h4 style="text-align:center;">Connexion</h4></div>
       <div>
-        <form action="../controller/Controller_Connexion.php" method="post">
+        <form action="controller/Controller_Connexion.php" method="post">
           Nom d'utilisateur:<br>
           <input type="text" name="userName"><br>
           Mot de passe:<br>

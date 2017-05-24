@@ -2,8 +2,8 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>Hello World</title>
-        <link rel="stylesheet" href="../css/materialize/css/materialize.css">
+        <title>Erreur</title>
+        <link rel="stylesheet" href="css/materialize/css/materialize.css">
         <style>
             body {
                 background-color: white;
@@ -16,8 +16,7 @@
     ?>
 
 		<div class="container">
-			<h3>Erreur : </h3>
-			<p><?php echo $messageErreur; ?></p>
+			<h3>Erreur : </h3><p><?php echo $messageErreur; ?></p>
 		</div>
 	</body>
 </html>
