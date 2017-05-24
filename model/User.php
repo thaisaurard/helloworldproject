@@ -8,7 +8,7 @@ class user
 		$bdhello=connexion();
 
 		$req = $bdhello->prepare('INSERT INTO user(username, usermail, userpassword) VALUES (:username,:usermail,:userpassword)');
-		/*$req->bindParam(':username',$username);
+		/* $req->bindParam(':username',$username);
 		$req->bindParam(':userpassword',$userpassword);
 		$req->bindParam(':usermail',$usermail);
 		*/
