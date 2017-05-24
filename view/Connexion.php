@@ -20,9 +20,9 @@
       <div>
         <form action="controller/Controller_Connexion.php" method="post">
           Nom d'utilisateur:<br>
-          <input type="text" name="userName"><br>
+          <input type="text" name="username"><br>
           Mot de passe:<br>
-          <input type="password" name="userPassword"><br>
+          <input type="password" name="userpassword"><br>
           <input type="submit" value="Submit">
         </form>
       </div>
