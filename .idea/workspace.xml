@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5b645776-14fd-4a38-830a-251a2ddc67e7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/Controller_Inscription.php" afterPath="$PROJECT_DIR$/controller/Controller_Inscription.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/User.php" afterPath="$PROJECT_DIR$/model/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/Inscription.php" afterPath="$PROJECT_DIR$/view/Inscription.php" />
-    </list>
+    <list default="true" id="5b645776-14fd-4a38-830a-251a2ddc67e7" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,9 +64,9 @@
             <state relative-caret-position="-125">
               <caret line="84" column="81" lean-forward="false" selection-start-line="84" selection-start-column="81" selection-end-line="84" selection-end-column="81" />
               <folding>
-                <marker date="1495635257786" expanded="true" signature="2976:3002" ph="SELECT * FRO... User" />
-                <marker date="1495635257786" expanded="true" signature="2976:3124" ph="..." />
-                <marker date="1495635257786" expanded="true" signature="2976:3127" ph="{...}" />
+                <marker date="1495639057727" expanded="true" signature="3038:3064" ph="SELECT * FRO... User" />
+                <marker date="1495639057727" expanded="true" signature="3038:3186" ph="..." />
+                <marker date="1495639057727" expanded="true" signature="3038:3189" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -500,9 +496,9 @@
         <state relative-caret-position="-125">
           <caret line="84" column="81" lean-forward="false" selection-start-line="84" selection-start-column="81" selection-end-line="84" selection-end-column="81" />
           <folding>
-            <marker date="1495635257786" expanded="true" signature="2976:3002" ph="SELECT * FRO... User" />
-            <marker date="1495635257786" expanded="true" signature="2976:3124" ph="..." />
-            <marker date="1495635257786" expanded="true" signature="2976:3127" ph="{...}" />
+            <marker date="1495639057727" expanded="true" signature="3038:3064" ph="SELECT * FRO... User" />
+            <marker date="1495639057727" expanded="true" signature="3038:3186" ph="..." />
+            <marker date="1495639057727" expanded="true" signature="3038:3189" ph="{...}" />
           </folding>
         </state>
       </provider>

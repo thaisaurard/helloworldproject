@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <title>Inscription</title>
-        <link rel="stylesheet" href="../css/materialize/css/materialize.css">
+        <link rel="stylesheet" href="css/materialize/css/materialize.css">
         <style>
         	body {
         		background-color: white;
@@ -19,7 +19,7 @@
       <div><h4 style="text-align:center;">Inscription</h4></div>
 
       <div>
-        <form method="post" action="../controller/Controller_Inscription.php">
+        <form method="post" action="controller/Controller_Inscription.php">
           Nom d'utilisateur:<br>
           <input type="text" name="username"><br>
           Adresse email:<br>
