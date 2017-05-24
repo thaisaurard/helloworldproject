@@ -7,12 +7,17 @@ class user
 		require_once('Pdo.php');
 		$bdhello=connexion();
 
-		$req = $bdhello->prepare('INSERT INTO user(username, userpassword, usermail) VALUES (:username,:userpassword,:usermail)');
-		$req->bindParam(':username',$username);
+		$req = $bdhello->prepare('INSERT INTO user(username, usermail, userpassword) VALUES (:username,:usermail,:userpassword)');
+		/*$req->bindParam(':username',$username);
 		$req->bindParam(':userpassword',$userpassword);
 		$req->bindParam(':usermail',$usermail);
+		*/
 
-		$req->execute();
+		$req->execute(array(
+		'username' => $username,
+		'usermail' => $usermail,
+		'userpassword' => $userpassword
+		));
 	}
 
 
@@ -77,7 +82,7 @@ class user
 		require_once('Pdo.php');
 		$bdhello=connexion();
 
-		$req = $bdhello->prepare("SELECT * FROM user WHERE usermail='".$usermail."'");
+		$req = $bdhello->prepare("SELECT * FROM user WHERE usermail ='".$usermail."'");
 
 		$req->execute();
 		$data=$req->fetch();

@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>Hello World</title>
+        <title>Inscription</title>
         <link rel="stylesheet" href="../css/materialize/css/materialize.css">
         <style>
         	body {
@@ -32,6 +32,6 @@
           </button>
         </form>
       </div>
-
+      <?php var_dump($_POST); ?>
     </body>
 </html>

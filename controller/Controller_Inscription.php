@@ -2,6 +2,8 @@
 	require_once ('../model/User.php');
 	ini_set('display_errors',1);
 
+	var_dump($_POST);
+
 	$username = htmlspecialchars($_POST['username']);
 	$usermail = htmlspecialchars($_POST['usermail']);
 	$userpassword = htmlspecialchars($_POST['userpassword']);
@@ -38,7 +40,7 @@
 	else
 	{
 		$userpassword = sha1(sha1($userpassword));
-		User::Add_User($username,$userpassword,$usermail);
+		User::Add_user($username,$userpassword,$usermail);
 
 		$cookie=substr(str_shuffle("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, 20);
 
