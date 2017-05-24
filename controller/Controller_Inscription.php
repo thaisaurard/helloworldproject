@@ -18,11 +18,7 @@
 
 		header("Location: ../Erreur.php?erreur=".$messageErreur);
 	}
-	elseif (strlen($userpassword)<6) {
-		$messageErreur = 'Votre mot de passe doit faire plus de 6 caractères';
 
-		header("Location: ../Erreur.php?erreur=".$messageErreur);
-	}
 	elseif ($userpassword != $checkPassword) {
 		$messageErreur = 'Les mots de passe saisis ne correspondent pas ! ';
 
