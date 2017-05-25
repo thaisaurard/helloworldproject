@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b645776-14fd-4a38-830a-251a2ddc67e7" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/Controller_Ajout_Monde.php" afterPath="$PROJECT_DIR$/controller/Controller_Ajout_Monde.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/Controller_Inscription.php" afterPath="$PROJECT_DIR$/controller/Controller_Inscription.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/Controller_ListeMonde.php" afterPath="$PROJECT_DIR$/controller/Controller_ListeMonde.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/User.php" afterPath="$PROJECT_DIR$/model/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/ListePersonnages.php" afterPath="$PROJECT_DIR$/view/ListePersonnages.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/World.php" afterPath="$PROJECT_DIR$/model/World.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/Ajout_monde.php" afterPath="$PROJECT_DIR$/view/Ajout_monde.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/ListeMondes.php" afterPath="$PROJECT_DIR$/view/ListeMondes.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -69,10 +74,10 @@
       <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-125">
-              <caret line="84" column="55" lean-forward="false" selection-start-line="84" selection-start-column="55" selection-end-line="84" selection-end-column="55" />
+            <state relative-caret-position="-108">
+              <caret line="85" column="55" lean-forward="false" selection-start-line="85" selection-start-column="55" selection-end-line="85" selection-end-column="55" />
               <folding>
-                <marker date="1495655933051" expanded="true" signature="3276:3279" ph="{...}" />
+                <marker date="1495702960101" expanded="true" signature="3172:3175" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -383,7 +388,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24304539" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -499,10 +504,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/model/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-125">
-          <caret line="84" column="55" lean-forward="false" selection-start-line="84" selection-start-column="55" selection-end-line="84" selection-end-column="55" />
+        <state relative-caret-position="-108">
+          <caret line="85" column="55" lean-forward="false" selection-start-line="85" selection-start-column="55" selection-end-line="85" selection-end-column="55" />
           <folding>
-            <marker date="1495655933051" expanded="true" signature="3276:3279" ph="{...}" />
+            <marker date="1495702960101" expanded="true" signature="3172:3175" ph="{...}" />
           </folding>
         </state>
       </provider>

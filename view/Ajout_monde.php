@@ -12,7 +12,6 @@
     </head>
     <body>
         <?php require ("view/header2.php");
-            //  require ("testconnexion.php");
             ini_set('display_errors',1);
             ?>
             <div><h2 style="text-align:center;">Ajouter un monde</h2></div>
