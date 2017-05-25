@@ -8,7 +8,7 @@
 
   $idUser = User::Get_user_Id($_COOKIE["codeconnexion"]);
 
-  $checkworld = World::Check_world($WorldName);
+  $checkworld = World::Check_world($WorldName, $idUser);
 
 
   if (empty($WorldName || empty($WorldInfos)) ) {

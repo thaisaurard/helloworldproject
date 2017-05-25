@@ -19,10 +19,21 @@ class Country
   public static function Get_world_countries($idWorld)
   {
     $bdhello=connexion();
-    $req = $bdhello->prepare('SELECT * FROM "Country" WHERE  idWorld = :idWorld');
+    $req = $bdhello->prepare('SELECT * FROM "Country" WHERE  "idWorld" = :idWorld');
     $req->bindParam(':idWorld', $idWorld);
     $req->execute();
     $data=$req->fetchAll();
+    return $data;
+  }
+
+  public static function Check_Country($CountryName, $idWorld)
+  {
+    $bdhello=connexion();
+    $req = $bdhello->prepare('SELECT * FROM "Country" WHERE "CountryName" = :CountryName AND "idWorld" = :idWorld');
+    $req->bindParam(':CountryName', $CountryName);
+    $req->bindParam(':idWorld', $idWorld);
+    $req->execute();
+    $data=$req->fetch();
     return $data;
   }
 

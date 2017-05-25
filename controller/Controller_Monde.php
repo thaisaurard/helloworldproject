@@ -13,17 +13,12 @@
 
 	  require_once('model/Country.php');
 	  require_once('model/World.php');
-	  require_once('view/ListeMondes.php');
-	//  $usercookie = $_COOKIE['codeconnexion'];
-	  $idworld= World::Get_world_Id($worldname);
 
-	  $liste = World::Get_world_countries($idworld);
+	  $idworldtab= World::Get_world_Id($worldname);
+		print_r($idworldtab);
+		$idworld=$idworldtab[0];
 
-
-
-	  //if (empty($liste)){
-	//print_r($liste);
-	  //}
+	  $liste = Country::Get_world_countries($idworld);
 
 
 

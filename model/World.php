@@ -30,7 +30,6 @@ class World
   public static function Get_world_infos($worldname)
   {
     $bdhello=connexion();
-    $worldname='hell';
     //$req = $bdhello->prepare('SELECT worldinfos FROM "World" WHERE worldname = :worldname');
     $req = $bdhello->prepare('SELECT worldinfos FROM "World" WHERE worldname = :worldname');
     $req->bindParam(':worldname', $worldname);
@@ -45,15 +44,16 @@ class World
     $req = $bdhello->prepare('SELECT idworld FROM "World" WHERE worldname = :worldname');
     $req->bindParam(':worldname', $worldname);
     $req->execute();
-    $data=$req->fetchAll();
+    $data=$req->fetch();
     return $data;
   }
 
-  public static function Check_world($worldname)
+  public static function Check_world($worldname, $iduser)
   {
     $bdhello=connexion();
-    $req = $bdhello->prepare('SELECT * FROM "World" WHERE worldname = :worldname');
+    $req = $bdhello->prepare('SELECT * FROM "World" WHERE worldname = :worldname AND iduser = :iduser');
     $req->bindParam(':worldname', $worldname);
+    $req->bindParam(':iduser', $iduser);
     $req->execute();
     $data=$req->fetch();
     return $data;

@@ -12,13 +12,13 @@
     </head>
     <body>
       <?php
-        require('Test_Connexion.php');
+        require_once('Test_Connexion.php');
         onlineOnly();
         if(isConnected()){
-          require ("view/header2.php");
+          require_once ("view/header2.php");
         }
         else{
-          require ("view/header.php");
+          require_once ("view/header.php");
         }
         ini_set('display_errors',1);
 
@@ -31,7 +31,7 @@
           <p style="margin:20px">
             <?php
 
-            if (count($worldinfos[0])==0){
+            if (count($worldinfos)==0){
               echo "Pas d'informations sur ce monde";
             }
             else{
@@ -44,14 +44,14 @@
         <div>
           <?php
 
-            if(empty($liste)){
+            if(empty($list)){
               echo "Vous n'avez créé aucun pays pour ce monde";
             }
             else{
               for($i=0;$i<count($liste);$i++){
 
-                $name = $liste[$i]['CountryName'] . '<br />';
-                echo "<a href ='Pays.php?worldname=".$name."'>".$name."</a>";
+                $CountryName = $liste[$i]['CountryName'] . '<br />';
+                echo "<a href ='Pays.php?CountryName=".$CountryName."'>".$CountryName."</a>";
                 //echo $link;
                 }
 
