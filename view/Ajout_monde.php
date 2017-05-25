@@ -11,9 +11,18 @@
         </style>
     </head>
     <body>
-        <?php require ("view/header2.php");
-            ini_set('display_errors',1);
-            ?>
+      <?php
+        require('Test_Connexion.php');
+        onlineOnly();
+        if(isConnected()){
+          require ("view/header2.php");
+        }
+        else{
+          require ("view/header.php");
+        }
+        ini_set('display_errors',1);
+
+      ?>
             <div><h2 style="text-align:center;">Ajouter un monde</h2></div>
             <div>
               <form method="post" action="controller/Controller_Ajout_Monde.php">

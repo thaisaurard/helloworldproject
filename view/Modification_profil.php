@@ -18,7 +18,20 @@
             //formulaire
             //mise à jour BDD
         ?>
+        <div>
         <h3 style="text-align:center;"> Modifier mon profil </h3>
+        </div>
+        <div>
+          <form method="post" action="controller/Controller_Modification_Profil.php">
+            Nom d'utilisateur:<br>
+            <input type="text" name="username"><br>
+            Adresse email:<br>
+            <input type="text" name="usermail"><br>
+            <button class="btn waves-effect waves-light" id="submit" value="valider">Inscription
+            </button>
+          </form>
+        </div>
+
 
     </body>
 </html>

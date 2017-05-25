@@ -11,7 +11,18 @@
         </style>
     </head>
     <body>
-        <?php require ("view/header2.php");?>
+      <?php
+        require('Test_Connexion.php');
+        onlineOnly();
+        if(isConnected()){
+          require ("view/header2.php");
+        }
+        else{
+          require ("view/header.php");
+        }
+        ini_set('display_errors',1);
+
+      ?>
         <div><h1 style="text-align:center;"><?php echo $WorldName ?></h1></div>
 
         <div>

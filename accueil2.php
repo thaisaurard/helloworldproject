@@ -11,10 +11,20 @@
         </style>
     </head>
     <body>
-        <?php require ("view/header2.php");
-              require ("testconnexion.php");
-              ini_set('display_errors',1);
-        ?>
+
+      <?php
+        require('Test_Connexion.php');
+        onlineOnly();
+        if(isConnected()){
+          require ("view/header2.php");
+        }
+        else{
+          require ("view/header.php");
+        }
+        ini_set('display_errors',1);
+
+      ?>
+        <div><h1 style="text-align:center;">Hello World</h1></div>
         <div>
           <ul style="text-align:center;">
 				      <h3><a href="Mondes.php"> Mondes </a></h3>

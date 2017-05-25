@@ -13,6 +13,7 @@
     <body>
         <?php require ("view/header2.php");
               ini_set('display_errors',1);
+              require ("controller/Controller_Profil.php");
         ?>
 
               <div>
