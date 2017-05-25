@@ -8,14 +8,24 @@
 
   $idUser = User::Get_user_Id($_COOKIE["codeconnexion"]);
 
+  $checkworld = World::Check_world($WorldName);
+
+
   if (empty($WorldName || empty($WorldInfos)) ) {
 		$messageErreur = "Merci de renseigner tous les champs! ";
     header("Location: ../Erreur.php?erreur=".$messageErreur);
   }
+
+  elseif (!(empty($checkworld)))
+  {
+    $messageErreur = "Il existe déjà un monde du même nom!";
+    header("Location: ../Erreur.php?erreur=".$messageErreur);
+  }
+
   else
   {
     World::Add_World($WorldName,$WorldInfos,$idUser);
   }
 
-  header("Location: ../Mondes.php");
+  header("Location: ../ListeMondes.php");
 ?>

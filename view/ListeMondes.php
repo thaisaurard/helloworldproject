@@ -39,8 +39,8 @@
                   for($i=0;$i<count($liste);$i++){
 
                     $name = $liste[$i]['worldname'] . '<br />';
-                    $link = "<a href ='Monde.php?worldname=".$name."'>".$name."</a>";
-                    echo $link;
+                    echo "<a href ='Monde.php?worldname=".$name."'>".$name."</a>";
+                    //echo $link;
                   }
 
                 }

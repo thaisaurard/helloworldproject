@@ -33,7 +33,28 @@ class World
     $req = $bdhello->prepare('SELECT worldinfos FROM "World" WHERE worldname = :worldname');
     $req->bindParam(':worldname', $worldname);
     $req->execute();
-    $data=$req->fetchAll();
+    $data=$req->fetch();
+
+    return $data;
   }
 
+  public static function Get_world_Id($worldname)
+  {
+    $bdhello=connexion();
+    $req = $bdhello->prepare('SELECT idworld FROM "World" WHERE worldname = :worldname');
+    $req->bindParam(':worldname', $worldname);
+    $req->execute();
+    $data=$req->fetch();
+    return $data;
+  }
+
+  public static function Check_world($worldname)
+  {
+    $bdhello=connexion();
+    $req = $bdhello->prepare('SELECT * FROM "World" WHERE worldname = :worldname');
+    $req->bindParam(':worldname', $worldname);
+    $req->execute();
+    $data=$req->fetch();
+    return $data;
+  }
 }

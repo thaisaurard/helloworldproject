@@ -24,8 +24,8 @@
 
         require_once('controller/Controller_Monde.php');
 
-      ?>
-        <div><h1 style="text-align:center;"><?php echo $worldname; ?></h1></div>
+        ?>
+        <div><h1 style="text-align:center;"><?php echo $_GET['worldname']; ?></h1></div>
 
         <div>
           <p>
@@ -35,7 +35,19 @@
         <div>
           <?php
 
-          //La liste des pays est ici
+            // if(empty($liste)){
+            //   echo "Vous n'avez créé aucun pays pour ce monde";
+            // }
+            // else{
+            //   for($i=0;$i<count($liste);$i++){
+            //
+            //     $name = $liste[$i]['CountryName'] . '<br />';
+            //     echo "<a href ='Pays.php?worldname=".$name."'>".$name."</a>";
+            //     //echo $link;
+            //  }
+
+            //}
+
 
 
            ?>
