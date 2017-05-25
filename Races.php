@@ -1,1 +1,1 @@
-<?php require_once("view/ListeRaces.php"); ?>
+<?php require("view/ListeRaces.php"); ?>

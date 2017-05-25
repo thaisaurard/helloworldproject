@@ -15,19 +15,9 @@
         <div><h1 style="text-align:center;">Mes Personnages</h1></div>
         <div>
           <?php
-            require('PDO.php');
-            $bdd=connexion();
-            $reponse = $bdd->query('SELECT * FROM character');
-
-            // On affiche chaque entrée une à une
-            while ($donnees = $reponse->fetch())
-            {
-            ?>
-                <p style="margin:10px"> <?php echo $donnees['charactername']; ?></br></p>
-            <?php
-            }
-
-            ?>
+            require_once(__DIR__."/../model/Character.php");
+            echo(Character::list_all_characters());
+          ?>
         </div>
 
       </body>
