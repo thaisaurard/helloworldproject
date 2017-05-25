@@ -15,11 +15,10 @@
               require ("testconnexion.php");
               ini_set('display_errors',1);
         ?>
-        <div><h1 style="text-align:center;">Hello World</h1></div>
         <div>
           <ul style="text-align:center;">
-				      <li><a href="Mondes.php"> Mondes </a></li>
-				      <li><a href="Personnages.php"> Personnages </a></li>
+				      <h3><a href="Mondes.php"> Mondes </a></h3>
+				      <h3><a href="Personnages.php"> Personnages </a></h3>
           </ul>
         </div>
     <div>
