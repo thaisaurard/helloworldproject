@@ -40,17 +40,17 @@ class user
 	}
 
 
-  public static function Set_user_Coockie_Code($usermail,$usercookie)
+  public static function Set_user_Coockie_Code($username,$usercookie)
   //user_Mail x user_Cookie_Code =>
   //données : $usermail string correspondant au mail de l'utilisateur, $usercookie string correspondant au cookie que l'on souhaite attribuer à l'utilisateur
   //résultat : modifie la base de données en attribuant un code cookie à l'utilisateur dont le mail est passé en entrée
   {
     $bdhello=connexion();
 
-    $req = $bdhello->prepare('UPDATE "user" SET usercookie =:usercookie WHERE usermail=:usermail');
+    $req = $bdhello->prepare('UPDATE "user" SET usercookie=:usercookie WHERE username=:username');
     $req->bindParam(':usercookie',$usercookie);
-    $req->bindParam(':usermail',$usermail);
-
+    $req->bindParam(':username',$username);
+		echo "username".$username;
     $req->execute();
   }
 
@@ -63,13 +63,15 @@ class user
 		require_once('Pdo.php');
 		$bdhello=connexion();
 
+		echo "variable usercookie : ".$usercookie;
 
-		$req = $bdhello->prepare("SELECT idUser FROM user WHERE usercookie='".$usercookie."'");
-
+		$req = $bdhello->prepare('SELECT iduser FROM "user" WHERE usercookie=:usercookie');
+		$req->bindParam(':usercookie',$usercookie);
 		$req->execute();
 		$data=$req->fetch();
 
-		return $data["idUser"]; //Verifier si null
+
+		return $data["iduser"]; //Verifier si null
 	}
 
 
@@ -82,9 +84,9 @@ class user
 
 		$bdhello=connexion();
 
-		$req = $bdhello->prepare("SELECT * FROM user");
+		$req = $bdhello->prepare('SELECT * FROM "user" WHERE usermail = :usermail');
 
-		$req->execute();
+		$req->execute(array(":usermail" => $usermail));
 		$data=$req->fetch();
 
 		return $data;
@@ -96,7 +98,7 @@ class user
 		$bdhello=connexion();
 
 
-		$req = $bdhello->prepare("SELECT * FROM user WHERE idUser = :idUser");
+		$req = $bdhello->prepare('SELECT * FROM "user" WHERE idUser = :idUser');
 		$req->bindParam(':idUser',$idUser);
 
 		$req->execute();

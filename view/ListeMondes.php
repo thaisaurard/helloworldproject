@@ -11,16 +11,39 @@
         </style>
     </head>
     <body>
-        <?php require ("view/header2.php");?>
-        <?php require ("controller/Controller_ListeMonde.php");?>
-        <div><h1 style="text-align:center;">Mes Mondes</h1></div>
-        <div>
+        <?php
+        require('Test_Connexion.php');
+        onlineOnly();
+        if(isConnected()){
+          require ("view/header2.php");
+        }
+        else{
+          require ("view/header.php");
+        }
+        ini_set('display_errors',1);
+
+      ?>
         <?php
 
-        //afficher liste des mondes de l'utilisateur
+        require ("controller/Controller_ListeMonde.php");?>
+        <div><h1 style="text-align:center;">Mes Mondes</h1></div>
+        <div>
+          <ul>
+            <li>
+              <?php
+                if(empty($liste)){
+                  echo "Vous n'avez créé aucun monde";
+                }
+                else{
+              	echo $liste['worldname'] . '<br />';
+                }
 
-        ?>
-         <li><a href="Ajout_Monde.php"> Ajouter un monde </a></li>
+              ?>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <li><a href="Ajout_Monde.php"> Ajouter un monde </a></li>
         </div>
 
 

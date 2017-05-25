@@ -11,7 +11,18 @@
         </style>
     </head>
     <body>
-        <?php require("header2.php");?>
+      <?php
+        require('Test_Connexion.php');
+        onlineOnly();
+        if(isConnected()){
+          require ("view/header2.php");
+        }
+        else{
+          require ("view/header.php");
+        }
+        ini_set('display_errors',1);
+
+      ?>
         <div><h1 style="text-align:center;">Mes Personnages</h1></div>
         <div>
           <?php

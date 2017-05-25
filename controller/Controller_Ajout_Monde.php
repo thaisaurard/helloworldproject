@@ -6,7 +6,7 @@
 	$WorldName = htmlspecialchars($_POST['WorldName']);
 	$WorldInfos = htmlspecialchars($_POST['WorldInfos']);
 
-  $idUser = User::Get_User_Id($_COOKIE["codeconnexion"]);
+  $idUser = User::Get_user_Id($_COOKIE["codeconnexion"]);
 
   if (empty($WorldName || empty($WorldInfos)) ) {
 		$messageErreur = "Merci de renseigner tous les champs! ";
@@ -17,4 +17,5 @@
     World::Add_World($WorldName,$WorldInfos,$idUser);
   }
 
+  header("Location: ../Mondes.php");
 ?>

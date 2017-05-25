@@ -1,13 +1,13 @@
 <?php
-  require_once('model/User.php')
-  require_once('model/World')
+  require_once('model/User.php');
+  require_once('model/World.php');
+//  $usercookie = $_COOKIE['codeconnexion'];
+  $idUser = User::Get_user_Id($_COOKIE['codeconnexion']);
 
-  $idUser =
+  $liste = World::Get_user_worlds($idUser);
+  //if (empty($liste)){
 
-
-
-
-
+  //}
 
 
 ?>
