@@ -25,10 +25,11 @@
       ?>
         <?php
 
-        require ("controller/Controller_ListeMonde.php");?>
+        require ("controller/Controller_ListeMondes.php");?>
         <div><h1 style="text-align:center;">Mes Mondes</h1></div>
+        <br>
         <div>
-          <ul>
+          <ul style="margin:20px">
             <li>
               <?php
                 if(empty($liste)){

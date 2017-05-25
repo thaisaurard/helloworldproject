@@ -22,6 +22,8 @@
         }
         ini_set('display_errors',1);
 
+        require_once('controller/Controller_Monde.php');
+
       ?>
         <div><h1 style="text-align:center;"><?php echo $WorldName ?></h1></div>
 

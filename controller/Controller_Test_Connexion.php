@@ -40,5 +40,5 @@ if(isConnected())
 }
 //L"utilisateur prouve qu"il est actif, on réinitialise la date d"expiration de son cookie
 
-$iduser=User::Get_user_Id($_COOKIE["codeconnexion"]);
+//$iduser=User::Get_user_Id($_COOKIE["codeconnexion"]);
 ?>

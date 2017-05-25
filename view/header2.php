@@ -1,7 +1,7 @@
 <nav>
 	<ul>
 		<li><a href="accueil2.php"> Accueil </a></li>
-		<li><a href="Mondes.php"> Mondes </a></li>
+		<li><a href="ListeMondes.php"> Mondes </a></li>
 		<li><a href="Personnages.php"> Personnages </a></li>
 		<li><a href="Races.php"> Races </a></li>
 	</ul>
