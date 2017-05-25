@@ -1,1 +1,1 @@
-<?php require('view/Inscription.php'); ?>
+<?php require_once('view/Inscription.php'); ?>

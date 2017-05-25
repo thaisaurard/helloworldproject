@@ -10,7 +10,7 @@
 
   if (empty($WorldName || empty($WorldInfos)) ) {
 		$messageErreur = "Merci de renseigner tous les champs! ";
-    header("Location: ../Erreur.php?erreur=".$messageErreyr);
+    header("Location: ../Erreur.php?erreur=".$messageErreur);
   }
   else
   {

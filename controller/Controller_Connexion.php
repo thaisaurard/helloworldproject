@@ -2,30 +2,26 @@
 require_once ("../model/User.php");
 
 
-$mdp = htmlspecialchars($_POST["userpassword"]);
-$mail = htmlspecialchars($_POST["usermail"]);
+$userpassword = htmlspecialchars($_POST["userpassword"]);
+$username = htmlspecialchars($_POST["username"]);
 
 
-if (empty($mdp) || empty($mail)) {
+if (empty($userpassword) || empty($username)) {
 	$messageErreur = "Merci de completer les champs manquants ! ";
 
 	header("Location: ../Erreur.php?erreur=".$messageErreur);
 }
-elseif (!(filter_var($mail, FILTER_VALIDATE_EMAIL))) {
-	$messageErreur = "Votre email n'est pas valide  ! ";
 
-	header("Location: ../Erreur.php?erreur=".$messageErreur);
-}
 else
 {
-	$mdp = sha1(sha1(htmlspecialchars($mdp)));
-	if(User::Check_Password($mdp,$mail))
+	$userpassword = sha1(sha1(htmlspecialchars($userpassword)));
+	if(User::Check_Password($userpassword,$username))
 	{
 		$cookie=substr(str_shuffle("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, 20);
 
 		setcookie("codeconnexion", $cookie, time()+(500), "/");
 
-		User::Set_User_Coockie_Code($mail,$cookie);
+		User::Set_User_Coockie_Code($username,$cookie);
 		header("Location: ../accueil2.php");
 	}
 	else

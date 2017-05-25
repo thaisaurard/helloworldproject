@@ -1,22 +1,26 @@
 <?php
+require_once('Pdo.php');
+
 class user
 {
 
 	public static function Add_user($username,$userpassword,$usermail)
 	{
-		require_once('Pdo.php');
+
 		$bdhello=connexion();
 
-		$req = $bdhello->prepare('INSERT INTO user(username, userpassword, usermail) VALUES (:username,:userpassword,:usermail)');
-		$req->bindParam(':username',$username);
-		$req->bindParam(':userpassword',$userpassword);
-		$req->bindParam(':usermail',$usermail);
+		$req = $bdhello->prepare('INSERT INTO "user"(username,usermail,userpassword) VALUES (:username,:usermail,:userpassword)');
+		// $req = $bdhello->prepare('SELECT * FROM "user"');
 
-		$req->execute();
+		$req->execute(array(
+		':username' => $username,
+		':userpassword' => $userpassword,
+		':usermail' => $usermail
+		));
 	}
 
 
-	public static function Check_Password($userpassword,$usermail)
+	public static function Check_Password($userpassword,$username)
 	//user_Password x user_Mail => bool
 	//données : $userpassword string correspondant au mot de passe utilisateur, $usermail string correspondant au mail de l'utilisateur
 	//résultat : bool vérifiant si le mot de passe entré correspond bien au mail de l'utilisateur
@@ -25,7 +29,8 @@ class user
 		$bdhello=connexion();
 	   //connecté à la base de donnée
 
-		$req = $bdhello->prepare("SELECT userpassword FROM user WHERE usermail='".$usermail."'");
+		$req = $bdhello->prepare('SELECT userpassword FROM "user" WHERE username= :username');
+		$req->bindParam(':username',$username);
 
 		$req->execute();
 		$data=$req->fetch();
@@ -40,10 +45,9 @@ class user
   //données : $usermail string correspondant au mail de l'utilisateur, $usercookie string correspondant au cookie que l'on souhaite attribuer à l'utilisateur
   //résultat : modifie la base de données en attribuant un code cookie à l'utilisateur dont le mail est passé en entrée
   {
-    require_once('Pdo.php');
     $bdhello=connexion();
 
-    $req = $bdhello->prepare("UPDATE user SET usercookie =:usercookie WHERE usermail=:usermail");
+    $req = $bdhello->prepare('UPDATE "user" SET usercookie =:usercookie WHERE usermail=:usermail');
     $req->bindParam(':usercookie',$usercookie);
     $req->bindParam(':usermail',$usermail);
 
@@ -69,15 +73,16 @@ class user
 	}
 
 
-	public static function Check_Mail($usermail)
+	public static function Check_Mail($usermail){
 	//user_Mail => [user]
 	//données : string correspondant au mail à vérifier
 	//résultat : vérifie si un mail existe dans la base de données, et le cas échéant renvoie un tableau contenant toutes les informations de l'utilisateur auquel est attribué le mail
-	{
-		require_once('Pdo.php');
+
+	//  WHERE usermail = :usermai array(":usermail" => $usermail)
+
 		$bdhello=connexion();
 
-		$req = $bdhello->prepare("SELECT * FROM user WHERE usermail='".$usermail."'");
+		$req = $bdhello->prepare("SELECT * FROM user");
 
 		$req->execute();
 		$data=$req->fetch();
