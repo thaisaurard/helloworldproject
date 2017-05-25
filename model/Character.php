@@ -17,7 +17,7 @@
 			{
 				if ($donnees['idUser'] == $idUser){
 					$race = Race::get_race_name($donnees['idRace']);
-			    	$printed_text = $printed_text."<li>".$donnees['charactername']." (".$race.") : ".$donnees['CharacterInfos']."</li>";
+			    	$printed_text = $printed_text."<li>".$donnees['charactername']." (".$race.") : <i>".$donnees['CharacterInfos']."</i></li>";
 				}
 			}
 			return $printed_text;
