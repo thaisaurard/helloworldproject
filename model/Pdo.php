@@ -26,7 +26,7 @@ try
 catch(Exception $e)
 {
 	// En cas d'erreur, on affiche un message et on arrête tout
-        die('Erreur : '.$e->getMessage());
+    die('Error while connecting database : '.$e->getMessage());
 }
 	return($helloworld);
 }
