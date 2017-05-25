@@ -15,12 +15,13 @@
         <?php require ("controller/Controller_ListeMonde.php");?>
         <div><h1 style="text-align:center;">Mes Mondes</h1></div>
         <div>
-        <table><?php
+        <?php
 
-        echo $liste;
+        echo
+
+          $liste['worldname'];
 
         ?>
-        </table>
          <li><a href="Ajout_Monde.php"> Ajouter un monde </a></li>
         </div>
 

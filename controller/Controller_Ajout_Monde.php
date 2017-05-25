@@ -17,4 +17,5 @@
     World::Add_World($WorldName,$WorldInfos,$idUser);
   }
 
+  header("Location: ../Mondes.php");
 ?>
