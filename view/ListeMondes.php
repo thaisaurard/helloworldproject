@@ -28,7 +28,7 @@
         require ("controller/Controller_ListeMondes.php");?>
         <div><h1 style="text-align:center;">Mes Mondes</h1></div>
         <br>
-        <div>
+        <div class="collection">
           <ul style="margin:20px">
             <li>
               <?php
@@ -37,7 +37,10 @@
                 }
                 else{
                   for($i=0;$i<count($liste);$i++){
-                    echo $liste[$i]['worldname'] . '<br />';
+
+                    $name = $liste[$i]['worldname'] . '<br />';
+                    $link = "<a href ='Monde.php?worldname=".$name."'>".$name."</a>";
+                    echo $link;
                   }
 
                 }

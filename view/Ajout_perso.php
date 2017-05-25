@@ -25,12 +25,6 @@
             <input type="text" name="CharacterAge"><br><br>
             Informations :<br>
             <input type="textarea" name="CharacterInfos"><br><br>
-            Race :<br>
-            <select name="race" style="display:block">
-                <?php require_once("model/Race.php");
-                    echo Race::dropdown_race();
-                ?>
-            </select><br><br>
             <button class="btn waves-effect waves-light" id="submit" value="valider">Ajouter
             </button>
           </form>

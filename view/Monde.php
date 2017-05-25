@@ -25,17 +25,18 @@
         require_once('controller/Controller_Monde.php');
 
       ?>
-        <div><h1 style="text-align:center;"><?php echo $WorldName ?></h1></div>
+        <div><h1 style="text-align:center;"><?php echo $worldname; ?></h1></div>
 
         <div>
           <p>
-            <?php echo $WorldInfos ?>
+            <?php echo $worldinfos; ?>
           </p>
 
         <div>
           <?php
 
           //La liste des pays est ici
+
 
            ?>
         </div>

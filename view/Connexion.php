@@ -23,7 +23,7 @@
           <input type="text" name="username"><br>
           Mot de passe:<br>
           <input type="password" name="userpassword"><br>
-          <input type="submit" value="Submit">
+          <input class="waves-effect waves-light btn" type="submit" value="Connexion">
         </form>
       </div>
     </body>

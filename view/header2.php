@@ -5,9 +5,9 @@
 		<li><a href="Personnages.php"> Personnages </a></li>
 		<li><a href="Races.php"> Races </a></li>
 	</ul>
-	<ul>
-		<li><a href="Profil.php" style="float:right;"> Mon Profil </a></li>
-		<li><a href="Deconnexion.php" style="float:right;"> Déconnexion </a></li>
+	<ul class="right hide-on-med-and-down">
+		<li><a href="Profil.php"> Mon Profil </a></li>
+		<li><a href="Deconnexion.php"> Déconnexion </a></li>
 	</ul>
 
 </nav>

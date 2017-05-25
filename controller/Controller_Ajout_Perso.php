@@ -6,7 +6,8 @@
 	$CharacterName = htmlspecialchars($_POST['CharacterName']);
 	$CharacterInfos = htmlspecialchars($_POST['CharacterInfos']);
   $CharacterAge = htmlspecialchars($_POST['CharacterAge']);
-  $idRace = htmlspecialchars($_POST['race']);
+
+  $idRace = 0;
 
 
   $idUser = User::Get_user_Id($_COOKIE["codeconnexion"]);
