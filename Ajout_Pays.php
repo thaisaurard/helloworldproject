@@ -1,1 +1,1 @@
-<?php require_once("view/Ajout_pays.php"); ?>
+<?php require_once("controller/Controller_Ajout_Pays.php"); ?>

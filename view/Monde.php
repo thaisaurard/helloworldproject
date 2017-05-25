@@ -22,37 +22,48 @@
         }
         ini_set('display_errors',1);
 
-        require_once('controller/Controller_Monde.php');
+        require('controller/Controller_Monde.php');
 
         ?>
         <div><h1 style="text-align:center;"><?php echo $_GET['worldname']; ?></h1></div>
-
+        <div style="margin:20px"><h5>Informations sur ce monde</h5></div>
         <div>
-          <p>
-            <?php echo $worldinfos; ?>
+          <p style="margin:20px">
+            <?php
+
+            if (count($worldinfos[0])==0){
+              echo "Pas d'informations sur ce monde";
+            }
+            else{
+              print($worldinfos[0][0]);
+            }
+
+            ?>
           </p>
 
         <div>
           <?php
 
-            // if(empty($liste)){
-            //   echo "Vous n'avez créé aucun pays pour ce monde";
-            // }
-            // else{
-            //   for($i=0;$i<count($liste);$i++){
-            //
-            //     $name = $liste[$i]['CountryName'] . '<br />';
-            //     echo "<a href ='Pays.php?worldname=".$name."'>".$name."</a>";
-            //     //echo $link;
-            //  }
+            if(empty($liste)){
+              echo "Vous n'avez créé aucun pays pour ce monde";
+            }
+            else{
+              for($i=0;$i<count($liste);$i++){
 
-            //}
+                $name = $liste[$i]['CountryName'] . '<br />';
+                echo "<a href ='Pays.php?worldname=".$name."'>".$name."</a>";
+                //echo $link;
+                }
 
-
+              }
 
            ?>
         </div>
-
+        <div>
+          <?php
+            echo "<a href='Ajout_Pays.php?idworld=".$idworld."'> Ajouter un pays </a>";
+          ?>
+        </div>
 
     </body>
 </html>

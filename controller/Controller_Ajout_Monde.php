@@ -16,8 +16,7 @@
     header("Location: ../Erreur.php?erreur=".$messageErreur);
   }
 
-  elseif (!(empty($checkworld)))
-  {
+  elseif (!(empty($checkworld))){
     $messageErreur = "Il existe déjà un monde du même nom!";
     header("Location: ../Erreur.php?erreur=".$messageErreur);
   }
