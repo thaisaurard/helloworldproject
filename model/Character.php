@@ -2,15 +2,23 @@
 	class character {
 		public static function list_all_characters(){
 			require_once('Pdo.php');
+			require_once ('model/User.php');
+
+			$idUser = User::Get_user_Id($_COOKIE["codeconnexion"]);
+
 			$bdd=connexion();
 			$reponse = $bdd->query('SELECT * FROM character');
-			$text = "";
+			$printed_text = "";
+
+
 			// On affiche chaque entrée une à une
 			while ($donnees = $reponse->fetch())
 			{
-			    $text = $text."<li>#".$donnees['idCharacter']." : ".$donnees['charactername']."</li>";
+				if ($donnees['idUser'] == $idUser){
+			    	$printed_text = $printed_text."<li>#".$donnees['idCharacter']." : ".$donnees['charactername']."</li>";
+				}
 			}
-			return $text;
+			return $printed_text;
 		}
 
 		public static function add_character($name, $infos, $user, $race){

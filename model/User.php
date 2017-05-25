@@ -63,7 +63,7 @@ class user
 		require_once('Pdo.php');
 		$bdhello=connexion();
 
-		echo "variable usercookie : ".$usercookie;
+		// echo "variable usercookie : ".$usercookie;
 
 		$req = $bdhello->prepare('SELECT iduser FROM "user" WHERE usercookie=:usercookie');
 		$req->bindParam(':usercookie',$usercookie);
