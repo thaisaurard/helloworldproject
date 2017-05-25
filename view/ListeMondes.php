@@ -35,7 +35,10 @@
                   echo "Vous n'avez créé aucun monde";
                 }
                 else{
-              	echo $liste['worldname'] . '<br />';
+                  for($i=0;$i<count($liste);$i++){
+                    echo $liste[$i]['worldname'] . '<br />';
+                  }
+
                 }
 
               ?>

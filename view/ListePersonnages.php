@@ -26,7 +26,7 @@
         <div><h1 style="text-align:center;">Mes Personnages</h1></div>
         <div>
           <?php
-            require_once(__DIR__."/../model/Character.php");
+            require_once('model/Character.php');
             echo(Character::list_all_characters());
           ?>
         </div>

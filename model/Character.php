@@ -1,7 +1,7 @@
 <?php
 	class character {
-		public function list_all_characters(){
-			require('Pdo.php');
+		public static function list_all_characters(){
+			require_once('Pdo.php');
 			$bdd=connexion();
 			$reponse = $bdd->query('SELECT * FROM character');
 			$text = "";
