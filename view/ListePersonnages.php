@@ -29,6 +29,8 @@
             require_once('model/Character.php');
             echo(Character::list_all_characters());
           ?>
+
+          <a href="Ajout_Personnage.php"> Créer un nouveau personnage </a>
         </div>
 
       </body>

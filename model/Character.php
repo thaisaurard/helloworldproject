@@ -12,5 +12,18 @@
 			}
 			return $text;
 		}
+
+		public static function add_character($name, $infos, $user, $race){
+			require_once('Pdo.php');
+			$bdd=connexion();
+			
+			$req = $bdd->prepare('INSERT INTO character("charactername", "CharacterInfos", "idRace", "idUser") VALUES (:charactername,:CharacterInfos,:idRace,:idUser)');
+			$req->bindParam(':charactername',$name);
+			$req->bindParam(':CharacterInfos',$infos);
+			$req->bindParam(':idUser',$user);
+			$req->bindParam(':idRace',$race);
+
+			$req->execute();
+		}
 	}
 ?>
