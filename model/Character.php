@@ -3,6 +3,7 @@
 		public static function list_all_characters(){
 			require_once('Pdo.php');
 			require_once ('model/User.php');
+			require_once ('model/Race.php');
 
 			$idUser = User::Get_user_Id($_COOKIE["codeconnexion"]);
 
@@ -15,7 +16,8 @@
 			while ($donnees = $reponse->fetch())
 			{
 				if ($donnees['idUser'] == $idUser){
-			    	$printed_text = $printed_text."<li>#".$donnees['idCharacter']." : ".$donnees['charactername']."</li>";
+					$race = Race::get_race_name($donnees['idRace']);
+			    	$printed_text = $printed_text."<li>".$donnees['charactername']." (".$race.") : ".$donnees['CharacterInfos']."</li>";
 				}
 			}
 			return $printed_text;
