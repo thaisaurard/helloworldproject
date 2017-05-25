@@ -14,7 +14,9 @@
 			// On affiche chaque entrée une à une
 			while ($donnees = $reponse->fetch())
 			{
-				$printed_text = $printed_text."<br/>".$donnees["RaceName"];
+				if ($idUser == $donnees['iduser']){
+					$printed_text = $printed_text."<br/>".$donnees["RaceName"];
+				}
 			}
 			return $printed_text;
 		}
