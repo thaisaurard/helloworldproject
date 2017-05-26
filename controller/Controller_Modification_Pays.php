@@ -6,7 +6,7 @@
 	//$iduser = User::Get_user_Id($_COOKIE['codeconnexion']);
 	$CountryName = $_POST['CountryName'];
   $CountryInfos = $_POST['CountryInfos'];
-  $idWorld =
+  //$idWorld =
 
   if (empty($CountryName || empty($CountryInfos)) ) {
 		$messageErreur = "Merci de renseigner tous les champs! ";

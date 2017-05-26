@@ -74,12 +74,13 @@ class World
 
   }
 
-  public static function Update_World($worldname,$worldinfos,$iduser)
+  public static function Update_World($oldworldname,$worldname,$worldinfos,$iduser)
   {
     $bdhello=connexion();
 
-    $req = $bdhello->prepare('UPDATE "World" SET worldname = :worldname, worldinfos = :worldinfos WHERE iduser=:iduser');
+    $req = $bdhello->prepare('UPDATE "World" SET worldname = :worldname, worldinfos = :worldinfos WHERE iduser=:iduser AND worldname=:oldworldname');
     $req->bindParam(':worldname',$worldname);
+    $req->bindParam(':oldworldname',$oldworldname);
     $req->bindParam(':worldinfos',$worldinfos);
     $req->bindParam(':iduser',$iduser);
 

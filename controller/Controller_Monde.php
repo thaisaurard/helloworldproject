@@ -22,7 +22,7 @@
 	  require_once('model/World.php');
 
 	  $idworld= World::Get_world_Id($worldname, $iduser);
-		print_r($idworld);
+		//print_r($idworld);
 		// $idworld=$idworldtab[0];
 
 	  $liste = Country::Get_world_countries($idworld);

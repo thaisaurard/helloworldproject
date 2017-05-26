@@ -72,8 +72,8 @@
 
         <div>
           <?php
-            //$worldname=$_GET['worldname'];
-            //echo "<a href='Modification_Monde.php?worldname=".$worldname."&worldinfos=".$worldinfos."'> Modifier les informations </a>";
+            $worldname=$_GET['worldname'];
+            echo "<a href='Modification_Monde.php?worldname=".$worldname."&worldinfos=".$worldinfos[0][0]."'> Modifier les informations </a>";
           ?>
         </div>
 

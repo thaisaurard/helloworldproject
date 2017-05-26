@@ -5,7 +5,7 @@
 
 	$CountryName = htmlspecialchars($_POST['CountryName']);
 	$CountryInfos = htmlspecialchars($_POST['CountryInfos']);
-	$idWorld = htmlspecialchars($_POST['idWorld']);
+	$idWorld = (int)htmlspecialchars($_POST['idWorld']);
 
 	$checkCountry = Country::Check_Country($CountryName, $idWorld);
 

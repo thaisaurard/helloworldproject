@@ -3,7 +3,8 @@
   require_once ('../model/World.php');
 	ini_set('display_errors',1);
 
-	$WorldName = htmlspecialchars($_POST['WorldName']);
+  $oldworldname = htmlspecialchars($_POST['WorldName']);
+  $WorldName = htmlspecialchars($_POST['NewWorldName']);
 	$WorldInfos = htmlspecialchars($_POST['WorldInfos']);
 
   $idUser = User::Get_user_Id($_COOKIE["codeconnexion"]);
@@ -21,7 +22,7 @@
   }
   else
   {
-    World::Update_World($WorldName,$WorldInfos,$idUser);
+    World::Update_World($oldworldname,$WorldName,$WorldInfos,$idUser);
   }
 
   header("Location: ../ListeMondes.php");

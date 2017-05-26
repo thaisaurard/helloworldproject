@@ -23,15 +23,22 @@
         ini_set('display_errors',1);
 
       ?>
-      <?php
-          echo "<div><h2 style="text-align:center;">Modifier $_GET['worldname']</h2></div>"
-      ?>
+
+          <div><h2 style="text-align:center;"><?php echo "Modifier ".$_GET['worldname'] ?></h2></div>
+
           <div>
-            <form method="post" action="controller/Controller_Modification_Pays.php">
+            <form method="post" action="controller/Controller_Modification_Monde.php">
+              <input type="hidden" name="WorldName" value="<?php $_GET['worldname']?>">
               Nom du monde:<br>
-              <?php "<input type="text" name="WorldName" value=.$_GET['worldname'].>"?><br><br>
-              Informations:<br>
-              <?php "<input type="textarea" name="WorldInfos" value=.$_GET['worldinfos'].><br><br>"?>
+              <input type="text" name="NewWorldName" value="<?php $_GET['worldname']?>"><br><br>
+
+              <p style="color:black">
+                <label for="WorldInfos"><h5> Informations </h5></label><br />
+
+                  <textarea name="WorldInfos" id="WorldInfos" rows="10" cols="50">
+                  <?php $_GET['worldinfos'] ?>
+                  </textarea>
+              </p>
               <button class="btn waves-effect waves-light" id="submit" value="valider">Modifier
               </button>
             </form>

@@ -23,8 +23,9 @@
                   Informations:<br>
                   <input type="textarea" name="CountryInfos"><br><br>
                   <?php
-                  $idworld= $_GET['idworld']; ?>
-                  <input type='hidden' name="idWorld" value=".<?php $idworld ?>.">
+                  $idworld= $_GET['idworld'];
+                  ?>
+                  <input type='hidden' name="idWorld" value="<?php $idworld ?>">
                   <button class="btn waves-effect waves-light" id="submit" value="valider">Ajouter
                   </button>
                 </form>
