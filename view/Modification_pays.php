@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>Hello World</title>
+        <title>Modification Pays</title>
         <link rel="stylesheet" href="css/materialize/css/materialize.css">
         <style>
         	body {

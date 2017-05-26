@@ -20,10 +20,15 @@
         // else{
         //   require_once ("view/header.php");
         // }
+        // require_once('model/World.php');
+        // require_once('model/User.php');
         ini_set('display_errors',1);
 
         require('controller/Controller_Monde.php');
-
+         //$worldname=$_GET['worldname'];
+        // $iduser = User::Get_user_Id($_COOKIE['codeconnexion']);
+        // $idworld= World::Get_world_Id($worldname, $iduser);
+        // $worldinfos = World::Get_world_infos($worldname, $iduser);
         ?>
         <div><h1 style="text-align:center;"><?php echo $_GET['worldname']; ?></h1></div>
         <div style="margin:20px"><h5>Informations sur ce monde</h5></div>
@@ -61,20 +66,20 @@
         </div>
         <div>
           <?php
-            echo "<a href='Ajout_Pays.php?idworld=$idworld'> Ajouter un pays </a>";
+            echo "<a href='Ajout_Pays.php?idworld=".$idworld."'> Ajouter un pays </a>";
           ?>
         </div>
 
         <div>
           <?php
-            $worldname=$_GET['worldname'];
-            echo "<a href='Modification_Monde.php?worldname=$worldname&worldinfos=$worldinfos'> Modifier les informations </a>";
+            //$worldname=$_GET['worldname'];
+            //echo "<a href='Modification_Monde.php?worldname=".$worldname."&worldinfos=".$worldinfos."'> Modifier les informations </a>";
           ?>
         </div>
 
         <div>
           <?php
-            echo "<a href='Suppression_Monde.php?idworld=$idworld'> Supprimer ce monde </a>";
+            echo "<a href='Suppression_Monde.php?idworld=".$idworld."'> Supprimer ce monde </a>";
           ?>
         </div>
 

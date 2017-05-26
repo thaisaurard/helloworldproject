@@ -9,7 +9,7 @@
 	$worldname = $_GET['worldname'];
 	//echo "nom:".$worldname;
 
-	$worldinfostab = World::Get_world_infos($worldname, $iduser);
+	$worldinfos = World::Get_world_infos($worldname, $iduser);
 	//$worldinfos= $worldinfostab[0];
 
 	//echo "infos: ".$worldinfos;
@@ -21,9 +21,9 @@
 	  require_once('model/Country.php');
 	  require_once('model/World.php');
 
-	  $idworldtab= World::Get_world_Id($worldname, $iduser);
-		print_r($idworldtab);
-		$idworld=$idworldtab[0];
+	  $idworld= World::Get_world_Id($worldname, $iduser);
+		print_r($idworld);
+		// $idworld=$idworldtab[0];
 
 	  $liste = Country::Get_world_countries($idworld);
 

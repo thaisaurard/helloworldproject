@@ -21,9 +21,7 @@ class user
 
 
 	public static function Check_Password($userpassword,$username)
-	//user_Password x user_Mail => bool
-	//données : $userpassword string correspondant au mot de passe utilisateur, $usermail string correspondant au mail de l'utilisateur
-	//résultat : bool vérifiant si le mot de passe entré correspond bien au mail de l'utilisateur
+
 	{
 		require_once('Pdo.php');
 		$bdhello=connexion();
@@ -41,9 +39,7 @@ class user
 
 
   public static function Set_user_Coockie_Code($username,$usercookie)
-  //user_Mail x user_Cookie_Code =>
-  //données : $usermail string correspondant au mail de l'utilisateur, $usercookie string correspondant au cookie que l'on souhaite attribuer à l'utilisateur
-  //résultat : modifie la base de données en attribuant un code cookie à l'utilisateur dont le mail est passé en entrée
+
   {
     $bdhello=connexion();
 
@@ -56,9 +52,7 @@ class user
 
 
 	public static function Get_user_Id($usercookie)
-	//user_Cookie_Code => user_Id
-	//données : $usercookieCode string correspondant à un code cookie
-	//résultat : vérifie si un code cookie existe dans la base de données, et le cas échéant renvoie un int correspondant à l'id de l'utilisateur auquel appartient le code cookie
+
 	{
 		require_once('Pdo.php');
 		$bdhello=connexion();
@@ -76,9 +70,8 @@ class user
 
 
 	public static function Check_Mail($usermail){
-	//user_Mail => [user]
-	//données : string correspondant au mail à vérifier
-	//résultat : vérifie si un mail existe dans la base de données, et le cas échéant renvoie un tableau contenant toutes les informations de l'utilisateur auquel est attribué le mail
+
+	//résultat : vérifie si un mail existe dans la base de données
 
 	//  WHERE usermail = :usermai array(":usermail" => $usermail)
 
