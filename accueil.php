@@ -15,5 +15,7 @@
       <div>
         <h5 style="text-align:center"> Créez et gérez des univers fictifs <h5>
       </div>
+
+      <?php require ("view/footer.php");?>
     </body>
 </html>

@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <title>Erreur</title>
-        <link rel="stylesheet" href="css/materialize/css/materialize.css">
+        <?php include ("css/css_config.php") ?>
         <style>
             body {
                 background-color: white;
@@ -28,5 +28,6 @@
 			<h3>Oups!</h3>
       <p>Cette page n'est pas encore disponible!</p>
 		</div>
+    <?php require ("view/footer.php");?>
 	</body>
 </html>

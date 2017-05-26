@@ -34,5 +34,6 @@
     <div>
         <?php //echo ?>
     </div>
+      <?php require ("view/footer.php");?>
     </body>
 </html>

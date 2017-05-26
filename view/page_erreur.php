@@ -27,5 +27,6 @@
 		<div class="container">
 			<h3>Erreur : </h3><p><?php echo $messageErreur; ?></p>
 		</div>
+    <?php require ("view/footer.php");?>
 	</body>
 </html>

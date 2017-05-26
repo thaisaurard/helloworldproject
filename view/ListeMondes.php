@@ -53,6 +53,6 @@
           <li><a href="Ajout_Monde.php"> Ajouter un monde </a></li>
         </div>
 
-
+      <?php require ("view/footer.php");?>
     </body>
 </html>

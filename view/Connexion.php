@@ -26,5 +26,6 @@
           <input class="waves-effect waves-light btn" type="submit" value="Connexion">
         </form>
       </div>
+      <?php require ("view/footer.php");?>
     </body>
 </html>

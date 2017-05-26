@@ -26,5 +26,6 @@
             </button>
           </form>
         </div>
+    <?php require ("view/footer.php");?>
     </body>
 </html>

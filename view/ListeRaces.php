@@ -33,7 +33,7 @@
             <a href="Ajout_Race.php"> Créer une nouvelle race </a>
 
         </div>
-
+      <?php require ("view/footer.php");?>
       </body>
 
 </html>

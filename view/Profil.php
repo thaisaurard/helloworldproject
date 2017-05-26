@@ -32,6 +32,6 @@
           			</ul>
           		</div>
           		<a href="Oups.php" class="waves-effect waves-light btn">Modifier le profil</a>
-
-      </body>
+      <?php require ("view/footer.php");?>
+    </body>
 </html>
