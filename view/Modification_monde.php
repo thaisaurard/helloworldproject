@@ -34,10 +34,7 @@
 
               <p style="color:black">
                 <label for="WorldInfos"><h5> Informations </h5></label><br />
-
-                  <textarea name="WorldInfos" id="WorldInfos" rows="10" cols="50">
-                  <?php $_GET['worldinfos'] ?>
-                  </textarea>
+                <textarea name="WorldInfos" id="WorldInfos" rows="10" cols="50"></textarea>
               </p>
               <button class="btn waves-effect waves-light" id="submit" value="valider">Modifier
               </button>

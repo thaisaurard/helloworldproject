@@ -44,11 +44,11 @@
             }
 
             ?>
-          </p>
+          </p><br><br>
 
-        <div>
+
+          <div>
           <?php
-
             if(empty($list)){
               echo "Vous n'avez créé aucun pays pour ce monde";
             }
@@ -59,30 +59,36 @@
                 echo "<a href ='Pays.php?CountryName=".$CountryName."'>".$CountryName."</a>";
                 //echo $link;
                 }
-
               }
-
            ?>
-        </div>
+        </div><br><br>
+        <div>
+
+    <ul class="collection">
+      <li>
         <div>
           <?php
-            echo "<a href='Ajout_Pays.php?idworld=".$idworld."'> Ajouter un pays </a>";
+            //echo "<a href='Ajout_Pays.php?idworld=".$idworld."'> Ajouter un pays </a>";
           ?>
         </div>
-
+      </li>
+      <li>
         <div>
           <?php
             $worldname=$_GET['worldname'];
             echo "<a href='Modification_Monde.php?worldname=".$worldname."&worldinfos=".$worldinfos[0][0]."'> Modifier les informations </a>";
           ?>
         </div>
-
+      </li>
+      <li>
         <div>
           <?php
             echo "<a href='Suppression_Monde.php?idworld=".$idworld."'> Supprimer ce monde </a>";
           ?>
         </div>
-
+      </li>
+      </ul>
+    </div>
 
     </body>
 </html>

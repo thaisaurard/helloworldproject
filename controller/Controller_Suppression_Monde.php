@@ -4,7 +4,7 @@
   $idworld = $_GET['idworld'];
 
   World::Delete_World($idworld);
-  header("Location: ../ListeMondes.php");
+  header("Location: ListeMondes.php");
 
 
 ?>

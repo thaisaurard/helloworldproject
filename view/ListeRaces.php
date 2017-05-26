@@ -11,7 +11,18 @@
         </style>
     </head>
     <body>
-        <?php require("header2.php");?>
+      <?php
+        require('Test_Connexion.php');
+        onlineOnly();
+        if(isConnected()){
+          require ("view/header2.php");
+        }
+        else{
+          require ("view/header.php");
+        }
+        ini_set('display_errors',1);
+
+      ?>
         <div><h1 style="text-align:center;">Mes Races</h1></div>
         <div>
           <?php
@@ -20,7 +31,7 @@
             ?>
             <br/>
             <a href="Ajout_Race.php"> Créer une nouvelle race </a>
-            
+
         </div>
 
       </body>

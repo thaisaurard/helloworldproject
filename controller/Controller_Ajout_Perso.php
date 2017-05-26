@@ -12,6 +12,11 @@
   $idUser = User::Get_user_Id($_COOKIE["codeconnexion"]);
 	$checkcharacter = character::Check_character($CharacterName, $idUser);
 
+	if (empty($idRace) ) {
+		$messageErreur = "Merci de remplir tous les champs! (Vous devez créer la race de votre personnage!) ";
+    header("Location: ../Erreur.php?erreur=".$messageErreur);
+  }
+
   if (empty($CharacterName || empty($CharacterInfos)) ) {
 		$messageErreur = "Merci de renseigner tous les champs! ";
     header("Location: ../Erreur.php?erreur=".$messageErreur);
