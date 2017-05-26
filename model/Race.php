@@ -20,11 +20,12 @@
 			}
 			return $printed_text;
 		}
+		
 
 		public static function add_race($name, $infos, $user){
 			require_once('Pdo.php');
 			$bdd=connexion();
-			
+
 			$req = $bdd->prepare('INSERT INTO "Race"("RaceName", "RaceInfos", "iduser") VALUES (:RaceName,:RaceInfos,:iduser)');
 			$req->bindParam(':RaceName',$name);
 			$req->bindParam(':RaceInfos',$infos);
@@ -57,7 +58,7 @@
 		public static function get_race_name($id){
 			require_once('Pdo.php');
 			$bdd=connexion();
-			
+
 			$reponse = $bdd->query('SELECT * FROM "Race" WHERE "idrace" = '.$id);
 			while ($donnees = $reponse->fetch()){
 				return $donnees['RaceName'];
