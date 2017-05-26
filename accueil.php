@@ -8,5 +8,6 @@
     <body>
         <?php require ("view/header.php");?>
         <h1 style="text-align:center">Hello World</h1>
+        <h5 style="text-align:center"> Créez et gérez des univers fictifs <h5>
     </body>
 </html>
