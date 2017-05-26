@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>Ajout Monde</title>
+        <title>Hello World</title>
         <link rel="stylesheet" href="css/materialize/css/materialize.css">
         <style>
         	body {
@@ -23,14 +23,16 @@
         ini_set('display_errors',1);
 
       ?>
-            <div><h2 style="text-align:center;">Ajouter un monde</h2></div>
+        <?php
+            echo "<div><h2 style="text-align:center;">Modifier $_GET['countryname']</h2></div>"
+        ?>
             <div>
-              <form method="post" action="controller/Controller_Ajout_Monde.php">
-                Nom du Monde:<br>
-                <input type="text" name="WorldName"><br><br>
+              <form method="post" action="controller/Controller_Modification_Pays.php">
+                Nom du Pays:<br>
+                <?php "<input type="text" name="CountryName" value=.$_GET['countryname'].>"?><br><br>
                 Informations:<br>
-                <input type="textarea" name="WorldInfos"><br><br>
-                <button class="btn waves-effect waves-light" id="submit" value="valider">Ajouter
+                <?php "<input type="textarea" name="CountryInfos" value=.$_GET['countryinfos'].><br><br>"?>
+                <button class="btn waves-effect waves-light" id="submit" value="valider">Modifier
                 </button>
               </form>
             </div>

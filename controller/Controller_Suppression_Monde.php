@@ -1,5 +1,5 @@
 <?php
-  require_once('model/World.php')
+  require_once('model/World.php');
 
   $idworld = $_GET['idworld'];
 

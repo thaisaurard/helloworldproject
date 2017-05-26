@@ -18,8 +18,16 @@
           <p>
             <?php echo $CountryInfos ?>
           </p>
-
         <div>
+        <div>
+          <?php
+            echo "<a href='Modification_Pays.php?countryname=$CountryName&countryinfos=$CountryInfos'> Modifier les informations </a>";
+          ?>
+        </div>
+
+
+
+
           <?php
 
           //La liste des villes est ici

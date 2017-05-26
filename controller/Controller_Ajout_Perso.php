@@ -10,9 +10,7 @@
 
 
   $idUser = User::Get_user_Id($_COOKIE["codeconnexion"]);
-	$checkcharacter = Character::Check_character($CharacterName, $idUser);
-
-
+	$checkcharacter = character::Check_character($CharacterName, $idUser);
 
   if (empty($CharacterName || empty($CharacterInfos)) ) {
 		$messageErreur = "Merci de renseigner tous les champs! ";

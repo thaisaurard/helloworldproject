@@ -30,6 +30,9 @@ class World
   public static function Get_world_infos($worldname, $iduser)
   {
     $bdhello=connexion();
+
+    $worldname = str_replace("<br />", "", $worldname);
+    $worldname = str_replace("<br/>", "", $worldname);
     //$req = $bdhello->prepare('SELECT worldinfos FROM "World" WHERE worldname = :worldname');
     $req = $bdhello->prepare('SELECT worldinfos FROM "World" WHERE worldname = :worldname AND iduser=:iduser');
     $req->bindParam(':worldname', $worldname);
@@ -66,6 +69,19 @@ class World
     $bdhello=connexion();
     $req = $bdhello->prepare('DELETE FROM "World" WHERE idworld = ?');
     $req->execute(array($idworld));
+
+  }
+
+  public static function Update_World($worldname,$worldinfos,$iduser)
+  {
+    $bdhello=connexion();
+
+    $req = $bdhello->prepare('UPDATE "World" SET worldname = :worldname, worldinfos = :worldinfos WHERE iduser=:iduser');
+    $req->bindParam(':worldname',$worldname);
+    $req->bindParam(':worldinfos',$worldinfos);
+    $req->bindParam(':iduser',$iduser);
+
+    $req->execute();
 
   }
 
