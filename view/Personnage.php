@@ -37,7 +37,7 @@
           <p style="margin:20px">
             <?php
             require_once("model/Race.php");
-            $race_txt = race::get_race_name($characterdata[0]["idRace"]);
+            $race_txt = race::get_race_name($characterdata["idRace"]);
             print($race_txt);
             // print_r($characterdata);
             ?>
@@ -52,9 +52,19 @@
               echo "Pas d'informations sur ce personnage";
             }
             else{
-              print($characterdata[0]["CharacterInfos"]);
+              print($characterdata["CharacterInfos"]);
             }
 
+            ?>
+          </p>
+        </div>
+        <br/>
+        <div>
+          <p style="margin:20px">
+            <?php
+            $id = $characterdata["idCharacter"];
+            $remove_link = "<a href='Suppression_Personnage.php?id=".$id."'>Supprimer le personnage</a>";
+            echo $remove_link;
             ?>
           </p>
         </div>

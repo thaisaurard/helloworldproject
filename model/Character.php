@@ -54,13 +54,13 @@ require_once('Pdo.php');
 			$req->bindParam(':iduser', $iduser);
 			$req->execute();
 			$data=$req->fetchAll();
-			return $data;
+			return $data[0];
 		}
 
 		public static function Check_character($charactername, $iduser)
 		{
 			$bdhello=connexion();
-	    $req = $bdhello->prepare('SELECT * FROM "character" WHERE charactername = :charactername AND iduser = :iduser');
+	    $req = $bdhello->prepare('SELECT * FROM "character" WHERE charactername = :charactername AND "idUser" = :iduser');
 	    $req->bindParam(':charactername', $charactername);
 	    $req->bindParam(':iduser', $iduser);
 	    $req->execute();
@@ -90,6 +90,17 @@ require_once('Pdo.php');
 				}
 			}
 			return $printed_text;
+		}
+
+		public static function remove_character($idCharacter, $idUser){
+			require_once('Pdo.php');
+			$bdd=connexion();
+
+			$req = $bdd->prepare('DELETE FROM character WHERE "idCharacter" = :idchar AND "idUser" = :iduser');
+			$req->bindParam(':idchar',$idCharacter);
+			$req->bindParam(':iduser',$idUser);
+
+			$req->execute();
 		}
 
 	}
