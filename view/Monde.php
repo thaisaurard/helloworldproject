@@ -31,11 +31,11 @@
           <p style="margin:20px">
             <?php
 
-            if (count($worldinfos)==0){
+            if (empty($worldinfos)){
               echo "Pas d'informations sur ce monde";
             }
             else{
-              print($worldinfos[0][0]);
+              echo($worldinfos());
             }
 
             ?>
@@ -64,11 +64,20 @@
             echo "<a href='Ajout_Pays.php?idworld=$idworld'> Ajouter un pays </a>";
           ?>
         </div>
+
+        <div>
+          <?php
+            $worldname=$_GET['worldname'];
+            echo "<a href='Modification_Monde.php?worldname=$worldname&worldinfos=$worldinfos'> Modifier les informations </a>";
+          ?>
+        </div>
+
         <div>
           <?php
             echo "<a href='Suppression_Monde.php?idworld=$idworld'> Supprimer ce monde </a>";
           ?>
         </div>
+
 
     </body>
 </html>

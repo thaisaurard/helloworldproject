@@ -53,6 +53,19 @@ class Country
   }
 
 
+  public static function Update_Country($countryname,$countryinfos,$idWorld)
+  {
+    $bdhello=connexion();
+
+    $req = $bdhello->prepare('UPDATE "Country" SET CountryName = :countryname, CountryInfos = :countryinfos WHERE idWorld=:idworld');
+    $req->bindParam(':worldname',$countryname);
+    $req->bindParam(':worldinfos',$countryinfos);
+    $req->bindParam(':idworld',$idWorld);
+
+    $req->execute();
+
+  }
+
 }
 
 ?>
