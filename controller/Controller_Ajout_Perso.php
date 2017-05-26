@@ -10,11 +10,16 @@
 
 
   $idUser = User::Get_user_Id($_COOKIE["codeconnexion"]);
+	$checkcharacter = Check_character($CharacterName, $idUser);
 
   if (empty($CharacterName || empty($CharacterInfos)) ) {
 		$messageErreur = "Merci de renseigner tous les champs! ";
     header("Location: ../Erreur.php?erreur=".$messageErreur);
   }
+	elseif (!(empty($checkcharacter))){
+		$messageErreur = "Il existe déjà un pays du même nom!";
+		header("Location: ../Erreur.php?erreur=".$messageErreur);
+	}
   else
   {
     Character::add_character($CharacterName,$CharacterInfos,$idUser,$idRace);

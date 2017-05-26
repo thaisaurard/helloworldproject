@@ -1,12 +1,11 @@
 <?php
-	//require_once('../view/Monde.php');
 	require_once('../model/Country.php');
   ini_set('display_errors',1);
 
-	$idWorld = $_GET['idworld'];
 
 	$CountryName = htmlspecialchars($_POST['CountryName']);
 	$CountryInfos = htmlspecialchars($_POST['CountryInfos']);
+	$idWorld = htmlspecialchars($_POST['idWorld']);
 
 	$checkCountry = Country::Check_Country($CountryName, $idWorld);
 

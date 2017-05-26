@@ -1,4 +1,5 @@
 <?php
+require_once('Pdo.php');
 	class character
 {
 
@@ -26,7 +27,27 @@
 			return $data;
 		}
 
+		public static function Get_character_infos($charactername, $iduser)
+		{
+			$bdhello=connexion();
+			$req = $bdhello->prepare('SELECT "CharacterInfos" FROM "character" WHERE charactername = :charactername AND "idUser"=:iduser');
+			$req->bindParam(':charactername', $charactername);
+			$req->bindParam(':iduser', $iduser);
+			$req->execute();
+			$data=$req->fetchAll();
+			return $data;
+		}
 
+		public static function Check_character($charactername, $iduser)
+		{
+			$bdhello=connexion();
+	    $req = $bdhello->prepare('SELECT * FROM "character" WHERE charactername = :charactername AND iduser = :iduser');
+	    $req->bindParam(':charactername', $charactername);
+	    $req->bindParam(':iduser', $iduser);
+	    $req->execute();
+	    $data=$req->fetch();
+	    return $data;
+		}
 
 
 		public static function list_all_characters(){

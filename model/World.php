@@ -27,22 +27,24 @@ class World
     return $data;
   }
 
-  public static function Get_world_infos($worldname)
+  public static function Get_world_infos($worldname, $iduser)
   {
     $bdhello=connexion();
     //$req = $bdhello->prepare('SELECT worldinfos FROM "World" WHERE worldname = :worldname');
-    $req = $bdhello->prepare('SELECT worldinfos FROM "World" WHERE worldname = :worldname');
+    $req = $bdhello->prepare('SELECT worldinfos FROM "World" WHERE worldname = :worldname AND iduser=:iduser');
     $req->bindParam(':worldname', $worldname);
+    $req->bindParam(':iduser', $iduser);
     $req->execute();
     $data=$req->fetchAll();
     return $data;
   }
 
-  public static function Get_world_Id($worldname)
+  public static function Get_world_Id($worldname, $iduser)
   {
     $bdhello=connexion();
-    $req = $bdhello->prepare('SELECT idworld FROM "World" WHERE worldname = :worldname');
+    $req = $bdhello->prepare('SELECT idworld FROM "World" WHERE worldname = :worldname AND iduser=:iduser');
     $req->bindParam(':worldname', $worldname);
+        $req->bindParam(':iduser', $iduser);
     $req->execute();
     $data=$req->fetch();
     return $data;
@@ -58,4 +60,6 @@ class World
     $data=$req->fetch();
     return $data;
   }
+
+
 }

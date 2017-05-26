@@ -37,7 +37,7 @@
                   for($i=0;$i<count($liste);$i++){
 
                     $name = $liste[$i]['charactername'] . '<br />';
-                    echo "<a href ='Personnage.php?worldname=".$name."'>".$name."</a>";
+                    echo "<a href ='Personnage.php?charactername=".$name."'>".$name."</a>";
                   }
 
                 }

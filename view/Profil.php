@@ -11,10 +11,18 @@
         </style>
     </head>
     <body>
-        <?php require ("view/header2.php");
-              ini_set('display_errors',1);
-              require ("controller/Controller_Profil.php");
-        ?>
+      <?php
+      require('Test_Connexion.php');
+      onlineOnly();
+      if(isConnected()){
+        require ("view/header2.php");
+      }
+      else{
+        require ("view/header.php");
+      }
+      ini_set('display_errors',1);
+
+    ?>
 
               <div>
           			<ul>

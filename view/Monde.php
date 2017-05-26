@@ -12,14 +12,14 @@
     </head>
     <body>
       <?php
-        require_once('Test_Connexion.php');
-        onlineOnly();
-        if(isConnected()){
+        // require_once('Test_Connexion.php');
+        // onlineOnly();
+        // if(isConnected()){
           require_once ("view/header2.php");
-        }
-        else{
-          require_once ("view/header.php");
-        }
+        // }
+        // else{
+        //   require_once ("view/header.php");
+        // }
         ini_set('display_errors',1);
 
         require('controller/Controller_Monde.php');
@@ -61,7 +61,7 @@
         </div>
         <div>
           <?php
-            echo "<a href='Ajout_Pays.php?idworld=".$idworld."'> Ajouter un pays </a>";
+            echo "<a href='Ajout_Pays.php?idworld=$idworld'> Ajouter un pays </a>";
           ?>
         </div>
 

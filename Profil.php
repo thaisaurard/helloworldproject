@@ -1,1 +1,1 @@
-<?php require_once('view/Profil.php') ?>
+<?php require_once('controller/Controller_Profil.php') ?>
