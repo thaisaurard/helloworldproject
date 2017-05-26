@@ -26,22 +26,11 @@
 
         ?>
         <div><h1 style="text-align:center;"><?php echo $_GET['charactername']; ?></h1></div>
-        <div style="margin:20px"><h5>Informations sur ce personnage</h5></div>
-        <div>
-          <p style="margin:20px">
-            <?php
+
+        <?php
             require_once("model/Character.php");
             $characterdata = character::Get_character_data($charactername, $idUser);
-            if (count($characterinfos)==0){
-              echo "Pas d'informations sur ce personnage";
-            }
-            else{
-              print($characterdata[0]["CharacterInfos"]);
-            }
-
-            ?>
-          </p>
-        </div>
+        ?>
 
         <div style="margin:20px"><h5>Race</h5></div>
         <div>
@@ -54,6 +43,23 @@
             ?>
           </p>
         </div>
+
+        <div style="margin:20px"><h5>Informations sur ce personnage</h5></div>
+        <div>
+          <p style="margin:20px">
+            <?php
+            if (count($characterinfos)==0){
+              echo "Pas d'informations sur ce personnage";
+            }
+            else{
+              print($characterdata[0]["CharacterInfos"]);
+            }
+
+            ?>
+          </p>
+        </div>
+
+        
 
     </body>
 </html>
