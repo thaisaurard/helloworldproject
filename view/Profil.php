@@ -27,11 +27,11 @@
               <div>
           			<ul>
           			    <li><h4 style="text-align:center;">Profil</h4></li>
-          			    <li><?php // echo $info['userName'] ?></li>
+          			    <li><?php //echo $user ?></li>
           			    <li><?php // echo $info['userMail'] ?></li>
           			</ul>
           		</div>
-          		<a href="Modification_profil.php" class="waves-effect waves-light btn">Modifier le profil</a>
+          		<a href="Oups.php" class="waves-effect waves-light btn">Modifier le profil</a>
 
       </body>
 </html>

@@ -32,7 +32,7 @@
             <input type="text" name="username"><br>
             Adresse email:<br>
             <input type="text" name="usermail"><br>
-            <button class="btn waves-effect waves-light" id="submit" value="valider">Inscription
+            <button class="btn waves-effect waves-light" id="submit" value="valider">Modifier
             </button>
           </form>
         </div>

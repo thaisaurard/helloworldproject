@@ -12,7 +12,10 @@
   $checkworld = World::Check_world($WorldName, $idUser);
 
 
-  if (empty($WorldName || empty($WorldInfos)) ) {
+	if (empty($idUser) ) {
+		header("Location: ../Connexion.php");
+	}
+	if (empty($WorldName || empty($WorldInfos)) ) {
     header("Location: ../view/ListeMondes.php");
   }
 

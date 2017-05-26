@@ -28,13 +28,11 @@
 
           <div>
             <form method="post" action="controller/Controller_Modification_Monde.php">
-              <input type="hidden" name="WorldName" value="<?php $_GET['worldname']?>">
+              <input type="hidden" name="WorldName" >
               Nom du monde:<br>
-              <input type="text" name="NewWorldName" value="<?php $_GET['worldname']?>"><br><br>
-
+              <input type="text" name="NewWorldName" ><br><br>
               <p style="color:black">
-                <label for="WorldInfos"><h5> Informations </h5></label><br />
-                <textarea name="WorldInfos" id="WorldInfos" rows="10" cols="50"></textarea>
+                <input type="textarea" name="WorldInfos" ><br><br>
               </p>
               <button class="btn waves-effect waves-light" id="submit" value="valider">Modifier
               </button>
