@@ -27,8 +27,8 @@
         <div><h1 style="text-align:center;">Hello World</h1></div>
         <div>
           <ul style="text-align:center;">
-				      <h5><a href="ListeMondes.php"> Mondes </a></h5>
-				      <h5><a href="Personnages.php"> Personnages </a></h5>
+				      <h5><a class="waves-effect waves-light btn-large" href="ListeMondes.php"> Mondes </a></h5>
+				      <h5><a class="waves-effect waves-light btn-large" href="Personnages.php"> Personnages </a></h5>
           </ul>
         </div>
     <div>

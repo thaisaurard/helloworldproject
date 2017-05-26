@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <title>Erreur</title>
-        <?php include ("css/css_config.php") ?>
+          <link rel="stylesheet" href="css/materialize/css/materialize.css">
         <style>
             body {
                 background-color: white;
