@@ -44,13 +44,15 @@ class World
 
   public static function Get_world_Id($worldname, $iduser)
   {
+    $worldname = str_replace("<br />", "", $worldname);
+    $worldname = str_replace("<br/>", "", $worldname);
     $bdhello=connexion();
     $req = $bdhello->prepare('SELECT idworld FROM "World" WHERE worldname = :worldname AND iduser=:iduser');
     $req->bindParam(':worldname', $worldname);
         $req->bindParam(':iduser', $iduser);
     $req->execute();
     $data=$req->fetch();
-    return $data;
+    return $data[0];
   }
 
   public static function Check_world($worldname, $iduser)
