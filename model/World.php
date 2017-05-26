@@ -61,5 +61,12 @@ class World
     return $data;
   }
 
+  public static function Delete_World($idworld)
+  {
+    $bdhello=connexion();
+    $req = $bdhello->prepare('DELETE FROM "World" WHERE idworld = ?');
+    $req->execute(array($idworld));
+
+  }
 
 }
