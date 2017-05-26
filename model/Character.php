@@ -60,7 +60,7 @@ require_once('Pdo.php');
 		public static function Check_character($charactername, $iduser)
 		{
 			$bdhello=connexion();
-	    $req = $bdhello->prepare('SELECT * FROM "character" WHERE charactername = :charactername AND iduser = :iduser');
+	    $req = $bdhello->prepare('SELECT * FROM "character" WHERE charactername = :charactername AND "idUser" = :iduser');
 	    $req->bindParam(':charactername', $charactername);
 	    $req->bindParam(':iduser', $iduser);
 	    $req->execute();

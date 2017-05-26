@@ -30,6 +30,9 @@ class World
   public static function Get_world_infos($worldname, $iduser)
   {
     $bdhello=connexion();
+
+    $worldname = str_replace("<br />", "", $worldname);
+    $worldname = str_replace("<br/>", "", $worldname);
     //$req = $bdhello->prepare('SELECT worldinfos FROM "World" WHERE worldname = :worldname');
     $req = $bdhello->prepare('SELECT worldinfos FROM "World" WHERE worldname = :worldname AND iduser=:iduser');
     $req->bindParam(':worldname', $worldname);

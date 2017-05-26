@@ -9,11 +9,11 @@
 	$worldname = $_GET['worldname'];
 	//echo "nom:".$worldname;
 
-	$worldinfos = World::Get_world_infos($worldname, $iduser);
+	$worldinfostab = World::Get_world_infos($worldname, $iduser);
 	//$worldinfos= $worldinfostab[0];
 
 	//echo "infos: ".$worldinfos;
-	print_r($worldinfos);
+	//print_r($worldinfos);
 
 		require_once('view/Monde.php');
 

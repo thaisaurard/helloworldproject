@@ -35,7 +35,7 @@
               echo "Pas d'informations sur ce monde";
             }
             else{
-              echo($worldinfos());
+              print($worldinfos[0][0]);
             }
 
             ?>
