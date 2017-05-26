@@ -30,7 +30,26 @@ require_once('Pdo.php');
 		public static function Get_character_infos($charactername, $iduser)
 		{
 			$bdhello=connexion();
+
+			$charactername = str_replace("<br />", "", $charactername);
+			$charactername = str_replace("<br/>", "", $charactername);
+
 			$req = $bdhello->prepare('SELECT "CharacterInfos" FROM "character" WHERE charactername = :charactername AND "idUser"=:iduser');
+			$req->bindParam(':charactername', $charactername);
+			$req->bindParam(':iduser', $iduser);
+			$req->execute();
+			$data=$req->fetchAll();
+			return $data;
+		}
+
+		public static function Get_character_data($charactername, $iduser)
+		{
+			$bdhello=connexion();
+
+			$charactername = str_replace("<br />", "", $charactername);
+			$charactername = str_replace("<br/>", "", $charactername);
+
+			$req = $bdhello->prepare('SELECT * FROM "character" WHERE charactername = :charactername AND "idUser"=:iduser');
 			$req->bindParam(':charactername', $charactername);
 			$req->bindParam(':iduser', $iduser);
 			$req->execute();

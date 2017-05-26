@@ -30,17 +30,30 @@
         <div>
           <p style="margin:20px">
             <?php
-
+            require_once("model/Character.php");
+            $characterdata = character::Get_character_data($charactername, $idUser);
             if (count($characterinfos)==0){
               echo "Pas d'informations sur ce personnage";
             }
             else{
-              print($characterinfos[0][0]);
+              print($characterdata[0]["CharacterInfos"]);
             }
 
             ?>
           </p>
+        </div>
 
+        <div style="margin:20px"><h5>Race</h5></div>
+        <div>
+          <p style="margin:20px">
+            <?php
+            require_once("model/Race.php");
+            $race_txt = race::get_race_name($characterdata[0]["idRace"]);
+            print($race_txt);
+            // print_r($characterdata);
+            ?>
+          </p>
+        </div>
 
     </body>
 </html>
